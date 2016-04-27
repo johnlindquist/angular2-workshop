@@ -33,6 +33,17 @@ Import your component into `app.ts`
 Include the component with `directives:[Home]`
 Add the component to your `template` with `<home>`
 
+### Step 3 - Handling Clicks and Refs
+Create a button in your `Home` component
+Handle the click with a `(click)=onClick($event)`
+Log out the event
+
+
+Create an `input`
+Reference the `input` with a `#i`
+Pass the value with `#i.value` of the input to the `onClick`
+Log out the value
+
 
 
 
