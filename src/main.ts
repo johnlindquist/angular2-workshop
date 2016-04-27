@@ -7,4 +7,6 @@ import 'font-awesome/fonts/fontawesome-webfont.woff2';
 import {bootstrap} from 'angular2/platform/browser';
 import {App} from './app';
 
-bootstrap(App);
+bootstrap(App)
+  .then(()=> console.log(`App Running...`))
+  .catch(err => console.log(err));
