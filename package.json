@@ -22,6 +22,8 @@
     "es6-promise": "3.0.2",
     "es6-shim": "0.35.0",
     "file-loader": "^0.8.5",
+    "html-loader": "^0.4.3",
+    "html-webpack-plugin": "^2.16.0",
     "reflect-metadata": "0.1.2",
     "source-map-loader": "^0.1.5",
     "style-loader": "^0.13.1",
