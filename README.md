@@ -44,6 +44,20 @@ Reference the `input` with a `#i`
 Pass the value with `#i.value` of the input to the `onClick`
 Log out the value
 
+### Step 4 - Smart and Dumb Components
+Add a `people = [{name:"John"}];` to your `Home` component
+Create a `PersonList` component
+Add the `PersonList` to your `Home` component
+Create an `@Input` called `people` (remember to import it)
+Push `people` from `Home` into `PersonList` with `[people]=people`
+Render the first person from the `@Input` with `{{people[0].name}}`
+
+
+Move the `input` and the `button` to the `PersonList`
+Create an `@Output()` called `select`
+Call `this.select.next(value)` in the button's `onClick` handler
+Handle the `select` event in`Home` with `(selcect)=onSelect($event)`
+Log out the input
 
 
 
