@@ -25,6 +25,15 @@ Write a `@Component` with a selector of `'app'`
 Create a basic `template`
 Remember to `export` your `class`
 
+### Step 2 - Create a Component
+Create a `components` directory
+Add a file called `home.ts`
+Create a `@Component` and `export` it
+Import your component into `app.ts`
+Include the component with `directives:[Home]`
+Add the component to your `template` with `<home>`
+
+
 
 
 
