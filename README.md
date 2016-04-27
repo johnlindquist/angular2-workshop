@@ -12,5 +12,19 @@ Based heavily on the official seed project:
 - run `npm start` to fire up dev server
 - open browser to [`http://localhost:3000`](http://localhost:3000)
 
+### Workshop Resources
+https://angular.io/docs/ts/latest/cheatsheet.html
+http://hackerthemes.com/bootstrap-cheatsheet/
+https://fortawesome.github.io/Font-Awesome/icons/
+
+
+### Step 1 - Hello World
+Notice the `<app>` tag in `index.html`
+Delete everything in `app.ts`
+Write a `@Component` with a selector of `'app'`
+Create a basic `template`
+Remember to `export` your `class`
+
+
 
 
