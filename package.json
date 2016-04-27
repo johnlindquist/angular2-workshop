@@ -1,0 +1,57 @@
+{
+  "name": "angular2-starwars-party",
+  "version": "1.0.0",
+  "description": "Egghead Workshop",
+  "scripts": {
+    "typings-install": "node node_modules/typings/dist/bin.js install",
+    "postinstall": "npm run typings-install",
+    "build": "node node_modules/webpack/bin/webpack.js --inline --colors --progress --display-error-details --display-cached",
+    "watch": "npm run build -- --watch",
+    "server": "node node_modules/webpack-dev-server/bin/webpack-dev-server.js --inline --colors --progress --display-error-details --display-cached --port 3000  --content-base src",
+    "start": "npm run server"
+  },
+  "contributors": [
+    "Rob Wormald <robwormald@gmail.com>",
+    "PatrickJS <github@gdi2290.com>",
+    "John Lindquist"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "awesome-typescript-loader": "~0.16.2",
+    "css-loader": "^0.23.1",
+    "es6-promise": "3.0.2",
+    "es6-shim": "0.35.0",
+    "file-loader": "^0.8.5",
+    "reflect-metadata": "0.1.2",
+    "source-map-loader": "^0.1.5",
+    "style-loader": "^0.13.1",
+    "typescript": "~1.8.9",
+    "typings": "^0.7.9",
+    "url-loader": "^0.5.7",
+    "webpack": "^1.12.9",
+    "webpack-dev-server": "^1.14.0",
+    "webpack-merge": "^0.8.4"
+  },
+  "dependencies": {
+    "angular2": "2.0.0-beta.16",
+    "bootstrap": "^4.0.0-alpha.2",
+    "core-js": "^2.2.0",
+    "font-awesome": "^4.6.1",
+    "rxjs": "5.0.0-beta.2",
+    "zone.js": "~0.6.12"
+  },
+  "keywords": [
+    "Angular2",
+    "angular2-seed",
+    "official angular 2 seed",
+    "official angular2 seed"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/johnlindquist/angular2-starwars-party.git"
+  },
+  "bugs": {
+    "url": "https://github.com/johnlindquist/angular2-starwars-party/issues"
+  },
+  "homepage": "https://github.com/johnlindquiist/angular2-starwars-party#readme"
+}
