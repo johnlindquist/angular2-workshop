@@ -9,7 +9,7 @@ https://angular.io/docs/ts/latest/cheatsheet.html
 http://hackerthemes.com/bootstrap-cheatsheet/
 https://fortawesome.github.io/Font-Awesome/icons/
 
-### Step 0 - Setup
+### Exercise 0 - Setup
 - Clone or fork this repository
 - Make sure you have [node.js](https://nodejs.org/) installed
 - run `npm install -g webpack webpack-dev-server typings typescript` to install global dependencies
@@ -22,14 +22,14 @@ https://fortawesome.github.io/Font-Awesome/icons/
 - open browser to [`http://localhost:4000`](http://localhost:4000)
 
 
-### Step 1 - Hello World
+### Exercise 1 - Hello World
 - Notice the `<app>` tag in `index.html`
 - Delete everything in `app.ts`
 - Write a `@Component` with a selector of `'app'`
 - Create a basic `template`
 - Remember to `export` your `class`
 
-### Step 2 - Create a Component
+### Exercise 2 - Create a Component
 - Create a `components` directory
 - Add a file called `home.ts`
 - Create a `@Component` and `export` it
@@ -37,7 +37,7 @@ https://fortawesome.github.io/Font-Awesome/icons/
 - Include the component with `directives:[Home]`
 - Add the component to your `template` with `<home>`
 
-### Step 3 - Handling Clicks and Refs
+### Exercise 3 - Handling Clicks and Refs
 #### Logging an event
 - Create a button in your `Home` component
 - Handle the click with a `(click)=onClick($event)`
@@ -49,7 +49,7 @@ https://fortawesome.github.io/Font-Awesome/icons/
 - Pass the value with `#i.value` of the input to the `onClick`
 - Log out the value
 
-### Step 4 - Smart and Dumb Components
+### Exercise 4 - Smart and Dumb Components
 #### Inputs
 - Add a `people = [{name:"John"}];` to your `Home` component
 - Create a `PersonList` component
@@ -65,7 +65,7 @@ https://fortawesome.github.io/Font-Awesome/icons/
 - Handle the `select` event in`Home` with `(selcect)=onSelect($event)`
 - Log out the input
 
-### Step 5 - Templates, Styles, and Built-in Directives
+### Exercise 5 - Templates, Styles, and Built-in Directives
 #### `NgModel`
 - Add an `[(ngModel)]="name"` to the `input`
 - Add a `<span>{{name}}</span>`
@@ -88,7 +88,7 @@ https://fortawesome.github.io/Font-Awesome/icons/
 - Add `[ngClass]="{'fa-star':isOver, 'fa-star-o':!isOver}"` to the `<i>`
 - Roll over the span to she the icon toggle
 
-### Step 6 - Repeating Elements with *ngFor
+### Exercise 6 - Repeating Elements with *ngFor
 
 #### `*ngFor`
 - Add more `people` to the `Home`
@@ -129,7 +129,7 @@ https://fortawesome.github.io/Font-Awesome/icons/
 - Show the `person.name` in the `h4` with `{{person.name}}`
 
 
-### Step 7 - Move the Data to a Service
+### Exercise 7 - Move the Data to a Service
 - Create `services` directory
 - Create a `StarWars.ts` file
 - Use the `@Inject()` decorator on a `StarWars` class
@@ -139,7 +139,7 @@ https://fortawesome.github.io/Font-Awesome/icons/
 - Use the service in the template `[people]="starWars.people"`
 
 
-### Step 8 - Loading Data with Http
+### Exercise 8 - Loading Data with Http
 - Add `providers: [HTTP_PROVIDERS],` to your `app.ts`
 - Import `import {Http} from 'angular2/http';` in your service
 - Inject `Http` in your service `constructor(private _http:Http){}`
