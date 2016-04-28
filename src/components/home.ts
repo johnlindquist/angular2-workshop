@@ -7,13 +7,11 @@ import {StarWars} from '../services/starwars';
   directives: [PersonList],
   providers: [StarWars],
   template: `
-    <i class="fa fa-home" aria-hidden="true"></i>
-    <span>I'm the home template</span>
-    <i class="fa fa-home" aria-hidden="true"></i>
-    
-    <hr>
-    
-    <person-list (select)="onSelect($event)" [people]="starWars.people | async"></person-list>
+    <person-list 
+      (select)="onSelect($event)" 
+      [people]="starWars.people | async"
+      >
+    </person-list>
 `
 })
 export class Home{

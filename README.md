@@ -175,5 +175,50 @@ Use an `| async` pipe to load the data in the template
   [people]="starWars.people | async"
 ```
 
+### Exercise 8 - Searching Data with a Pipe
+#### Housekeeping
+- Clean up `PersonList` template so only `input` and `card`s remain
 
+```js
+<input [(ngModel)]="name" type="text">
 
+<div class="card-container">
+  <card
+    *ngFor="#person of people"
+    [person]="person">
+  </card>
+</div>
+```
+
+#### Creating a Pipe
+- Create a `pipes` directory
+- Create a `search.ts` file
+- Create a `@Pipe()` called `Search`
+- Create your own searching logic
+```js
+import {Pipe} from 'angular2/core';
+@Pipe({
+  name: 'search'
+})
+export class Search{
+  transform(data, key, term = ""){
+    if(!data) return null;
+    return data.filter(item => {
+      return item[key].toLowerCase().includes(term.toLowerCase());
+    })
+  }
+}
+```
+
+#### Using the Pipe
+Add the `Search` to your `PersonList`
+```js
+pipes:[Search],
+```
+
+- Add the `name` ("search") of the `Search` pipe to the template
+- Use `'name'` as the `key` to search on
+- Use the `name` from the `[(ngModel)]="name"` as the term
+```js
+  #person of people | search:'name':name"
+```
