@@ -121,23 +121,59 @@ https://fortawesome.github.io/Font-Awesome/icons/
 ```
 
 #### Loop through each person using `*ngFor`
-Create a `Card` component
-Give the `Card` an `@Input()` of `person`
-Add the `Card` to the `PersonList`
-Add `*ngFor="#person of people"` to the `card`
-Update the `src` to `[src]="person.image"`
-Show the `person.name` in the `h4` with `{{person.name}}`
+- Create a `Card` component
+- Give the `Card` an `@Input()` of `person`
+- Add the `Card` to the `PersonList`
+- Add `*ngFor="#person of people"` to the `card`
+- Update the `src` to `[src]="person.image"`
+- Show the `person.name` in the `h4` with `{{person.name}}`
 
 
 ### Step 7 - Move the Data to a Service
-Create `services` directory
-Create a `StarWars.ts` file
-Use the `@Inject()` decorator on a `StarWars` class
-Move the `people` from the `Home` to the service
-Include the service in the `Home` `providers:[]`
-Inject the service `constructor(public starWars:StarWars){}`
-Use the service in the template `[people]="starWars.people"`
+- Create `services` directory
+- Create a `StarWars.ts` file
+- Use the `@Inject()` decorator on a `StarWars` class
+- Move the `people` from the `Home` to the service
+- Include the service in the `Home` `providers:[]`
+- Inject the service `constructor(public starWars:StarWars){}`
+- Use the service in the template `[people]="starWars.people"`
 
+
+### Step 8 - Loading Data with Http
+- Add `providers: [HTTP_PROVIDERS],` to your `app.ts`
+- Import `import {Http} from 'angular2/http';` in your service
+- Inject `Http` in your service `constructor(private _http:Http){}`
+- Delete the `people` array
+- In the constructor, assign the people to an `http` request
+- Use `http.get()` then `map` then response using `res => res.json()`
+- `map` the images: `luke_skywalker.jpg` to `http://locahost:4000/luke_skywalker.jpg`
+
+```js
+import {Injectable} from 'angular2/core';
+import {Http} from 'angular2/http';
+import 'rxjs/add/operator/map';
+
+const API = 'http://localhost:4000';
+
+@Injectable()
+export class StarWars{
+  people;
+  constructor(private _http:Http){
+    this.people = _http.get(`${API}/people`)
+      .map(res => res.json() //get the response as json
+        .map(person => 
+          Object.assign(person, {image: `${API}/${person.image}`})
+        )
+      )
+  }
+}
+
+```
+
+Use an `| async` pipe to load the data in the template
+```js
+  [people]="starWars.people | async"
+```
 
 
 
