@@ -1,13 +1,16 @@
 import {Component, Input, Output, EventEmitter} from 'angular2/core';
+import {Card} from './card';
 
 @Component({
   selector: 'person-list',
+  directives: [Card],
   template: `<style>
   .person {
     cursor: pointer;
     cursor: hand;
   }
-  .card{
+
+  .card {
     max-width: 200px;
   }
 </style>
@@ -29,15 +32,10 @@ import {Component, Input, Output, EventEmitter} from 'angular2/core';
         </i>
       </span>
 
-
-  <div class="card" *ngFor="#person of people">
-    <img class="card-img-top" [src]="person.image"
-         alt="Card image cap">
-    <div class="card-block">
-      <h4 class="card-title">{{person.name}}</h4>
-      <a href="#" class="btn btn-primary"><i class="fa fa-plus"></i> Add to Party</a>
-    </div>
-  </div>
+<card
+  *ngFor="#person of people"
+  [person]="person">
+</card>
 `
 })
 export class PersonList{
