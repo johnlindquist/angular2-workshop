@@ -90,12 +90,39 @@ https://fortawesome.github.io/Font-Awesome/icons/
 ### Step 6 - Repeating Elements with *ngFor
 
 #### `*ngFor`
-- Loop through the `people` array with
-```html
-<li *ngFor="#person of people">
-  {{person.name}}
-</li>
+- Add more `people` to the `Home`
+```js
+  people = [
+    {
+      name:"Luke Skywalker",
+      image: "http://localhost:4000/luke_skywalker.jpg"
+    },
+    {
+      name:"Darth Vader",
+      image: "http://localhost:4000/darth_vader.jpg"
+    },
+    {
+      name:"Leia Organa",
+      image: "http://localhost:4000/leia_organa.jpg"
+    }
+  ];
 ```
+- Add a `card` to the `PersonList`
+```html
+  <div class="card">
+    <img class="card-img-top" src="person"
+         alt="Card image cap">
+    <div class="card-block">
+      <h4 class="card-title"></h4>
+      <a href="#" class="btn btn-primary"><i class="fa fa-plus"></i> Add to Party</a>
+    </div>
+  </div>
+```
+
+#### Loop through each person using `*ngFor`
+Add `*ngFor="#person of people"` to the `card`
+Update the `src` to `[src]="person.image"`
+Show the `person.name` in the `h4` with `{{person.name}}`
 
 
 
