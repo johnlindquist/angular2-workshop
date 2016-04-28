@@ -17,7 +17,7 @@ https://fortawesome.github.io/Font-Awesome/icons/
 - run `npm start` to fire up dev server
 - open browser to [`http://localhost:3000`](http://localhost:3000)
 
-
+#### Set up the StarWars server
 - Install and run [https://github.com/johnlindquist/swapi-json-server](https://github.com/johnlindquist/swapi-json-server)
 - open browser to [`http://localhost:4000`](http://localhost:4000)
 
@@ -38,11 +38,12 @@ https://fortawesome.github.io/Font-Awesome/icons/
 - Add the component to your `template` with `<home>`
 
 ### Step 3 - Handling Clicks and Refs
+#### Logging an event
 - Create a button in your `Home` component
 - Handle the click with a `(click)=onClick($event)`
 - Log out the event
 
-
+#### Logging an Input
 - Create an `input`
 - Reference the `input` with a `#i`
 - Pass the value with `#i.value` of the input to the `onClick`
