@@ -5,9 +5,9 @@ Based heavily on the official seed project:
 [https://github.com/angular/angular2-seed](https://github.com/angular/angular2-seed)
 
 ### Workshop Resources
-- [https://angular.io/docs/ts/latest/cheatsheet.html](Angular 2 Cheat Sheet)
-- [http://hackerthemes.com/bootstrap-cheatsheet/](Bootstrap 4 Cheat Sheet)
-- [https://fortawesome.github.io/Font-Awesome/icons/](Font Awesome Cheat Sheet)
+- [Angular 2 Cheat Sheet](https://angular.io/docs/ts/latest/cheatsheet.html)
+- [Bootstrap 4 Cheat Sheet](http://hackerthemes.com/bootstrap-cheatsheet/)
+- [Font Awesome Cheat Sheet](https://fortawesome.github.io/Font-Awesome/icons/)
 
 ### Completed Exercises
 The numbers folders 01-10 can be renamed at any time to catch up.
