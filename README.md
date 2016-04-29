@@ -9,6 +9,11 @@ https://angular.io/docs/ts/latest/cheatsheet.html
 http://hackerthemes.com/bootstrap-cheatsheet/
 https://fortawesome.github.io/Font-Awesome/icons/
 
+### Completed Exercises
+The numbers folders 01-10 can be renamed at any time to catch up.
+For example, rename `07` to `src` then restart your `npm start` to
+catch up to Exercise 7.
+
 ### Exercise 0 - Setup
 - Clone or fork this repository
 - Make sure you have [node.js](https://nodejs.org/) installed
@@ -20,7 +25,6 @@ https://fortawesome.github.io/Font-Awesome/icons/
 #### Set up the StarWars server
 - Install and run [https://github.com/johnlindquist/swapi-json-server](https://github.com/johnlindquist/swapi-json-server)
 - open browser to [`http://localhost:4000`](http://localhost:4000)
-
 
 ### Exercise 1 - Hello World
 - Notice the `<app>` tag in `index.html`
