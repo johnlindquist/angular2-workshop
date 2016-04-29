@@ -128,6 +128,40 @@ https://fortawesome.github.io/Font-Awesome/icons/
 - Update the `src` to `[src]="person.image"`
 - Show the `person.name` in the `h4` with `{{person.name}}`
 
+```js
+
+import {Component, Input} from 'angular2/core';
+@Component({
+  selector: 'card',
+  template: `<style>
+  .card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .info{
+    display: flex;
+    flex-basis: 100px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+</style>
+<div class="card">
+    <img [src]="person.image">
+    <div class="info">
+      <h5>{{person.name}}</h5>
+      <a href="#" class="btn btn-primary"><i class="fa fa-plus"></i> Add to Party</a>
+    </div>
+  </div>
+`
+})
+export class Card{
+  @Input() person;
+}
+
+```
 
 ### Exercise 7 - Move the Data to a Service
 - Create `services` directory
@@ -223,4 +257,45 @@ pipes:[Search],
 - Use the `name` from the `[(ngModel)]="name"` as the term
 ```js
   #person of people | search:'name':name"
+```
+
+
+### Exercise 10 - Adding Routes
+- Add a `<base href="/">` to your `index.html` `<head>`
+- Create a simple `Party` component with a `hello world` template
+- Import all the required Router classes into `app.ts`
+```js
+import {ROUTER_PROVIDERS, RouteConfig, RouterOutlet, RouterLink} from 'angular2/router';
+```
+- Include `RouterOutlet` and `RouterLink` in your `directives:[]`
+```js
+  directives: [RouterOutlet, RouterLink],
+```
+- Replace `<home>` the `<router-outlet>`
+- Decorate your `App` with your routes
+```js
+@RouteConfig([
+  {path: '/home', name: 'Home', component: Home, useAsDefault: true},
+  {path: '/party', name: 'Party', component: Party},
+  {path: '/**', redirectTo: ['Home'] }
+])
+``` 
+- Create a nav with `[routerLink]`
+```js
+<ul class="nav nav-tabs">
+    <li class="nav-item">
+      <a [routerLink]="['Home']" class="nav-link">Home</a>
+    </li>
+    <li class="nav-item">
+      <a [routerLink]="['Party']" class="nav-link">Party</a>
+    </li>
+  </ul>
+```
+- Stylize the active route with a `.router-link-active` style:
+```css
+.router-link-active{
+  color: #55595c;
+  background-color: #fff;
+  border-color: #ddd #ddd transparent;
+}
 ```

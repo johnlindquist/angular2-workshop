@@ -10,8 +10,10 @@ import {Card} from './card';
     cursor: hand;
   }
 
-  .card {
-    max-width: 200px;
+  .card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 </style>
 
@@ -31,11 +33,12 @@ import {Card} from './card';
           [ngClass]="{'fa-star':isOver, 'fa-star-o':!isOver}">
         </i>
       </span>
-
-<card
-  *ngFor="#person of people"
-  [person]="person">
-</card>
+<div class="card-container">
+  <card
+    *ngFor="#person of people"
+    [person]="person">
+  </card>
+</div>
 `
 })
 export class PersonList{

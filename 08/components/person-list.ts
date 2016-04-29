@@ -12,6 +12,7 @@ import {Card} from './card';
   .card-container{
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
   }
 </style>
 

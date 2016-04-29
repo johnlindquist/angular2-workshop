@@ -5,6 +5,11 @@ import {Card} from './card';
   selector: 'person-list',
   directives: [Card],
   template: `<style>
+  .card-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
   .person {
     cursor: pointer;
     cursor: hand;
@@ -27,11 +32,12 @@ import {Card} from './card';
           [ngClass]="{'fa-star':isOver, 'fa-star-o':!isOver}">
         </i>
       </span>
-
-<card
-  *ngFor="#person of people"
-  [person]="person">
-</card>
+<div class="card-container">
+  <card
+    *ngFor="#person of people"
+    [person]="person">
+  </card>
+</div>
 `
 })
 export class PersonList{
