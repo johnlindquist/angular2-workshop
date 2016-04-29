@@ -110,14 +110,13 @@ https://fortawesome.github.io/Font-Awesome/icons/
 ```
 - Add a `card` to the `PersonList`
 ```html
-  <div class="card">
-    <img class="card-img-top" src="person"
-         alt="Card image cap">
-    <div class="card-block">
-      <h4 class="card-title"></h4>
-      <a href="#" class="btn btn-primary"><i class="fa fa-plus"></i> Add to Party</a>
-    </div>
+<div class="card">
+  <img [src]="person.image">
+  <div class="info">
+    <h5>{{person.name}}</h5>
+    <a href="#" class="btn btn-primary"><i class="fa fa-plus"></i> Add to Party</a>
   </div>
+</div>
 ```
 
 #### Loop through each person using `*ngFor`
