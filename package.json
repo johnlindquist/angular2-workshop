@@ -1,7 +1,7 @@
 {
-  "name": "angular2-starwars-party",
+  "name": "angular2-workshop",
   "version": "1.0.0",
-  "description": "Egghead Workshop",
+  "description": "Egghead.io - Angular 2 Workshop",
   "scripts": {
     "typings-install": "node node_modules/typings/dist/bin.js install",
     "postinstall": "npm run typings-install",
@@ -11,8 +11,6 @@
     "start": "npm run server"
   },
   "contributors": [
-    "Rob Wormald <robwormald@gmail.com>",
-    "PatrickJS <github@gdi2290.com>",
     "John Lindquist"
   ],
   "license": "MIT",
@@ -43,17 +41,14 @@
     "zone.js": "~0.6.12"
   },
   "keywords": [
-    "Angular2",
-    "angular2-seed",
-    "official angular 2 seed",
-    "official angular2 seed"
+    "Angular2"
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/johnlindquist/angular2-starwars-party.git"
+    "url": "git+https://github.com/johnlindquist/angular2-workshop.git"
   },
   "bugs": {
-    "url": "https://github.com/johnlindquist/angular2-starwars-party/issues"
+    "url": "https://github.com/johnlindquist/angular2-workshop/issues"
   },
-  "homepage": "https://github.com/johnlindquiist/angular2-starwars-party#readme"
+  "homepage": "https://github.com/johnlindquiist/angular2-workshop#readme"
 }
