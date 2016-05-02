@@ -1,8 +1,7 @@
 import {Component, Input, Output, EventEmitter} from 'angular2/core';
 import {Card} from './card';
 import {Search} from '../pipes/search';
-import {COMMON_PIPES} from 'angular2/common';
-COMMON_PIPES
+
 @Component({
   selector: 'person-list',
   directives: [Card],
@@ -24,7 +23,9 @@ COMMON_PIPES
 <div class="card-container">
   <card
     *ngFor="#person of people | search:'name':name"
-    [person]="person">
+    [person]="person"
+    (add)="select.emit($event)"
+    >
   </card>
 </div>
 `
@@ -32,8 +33,4 @@ COMMON_PIPES
 export class PersonList{
   @Input() people;
   @Output() select = new EventEmitter();
-
-  onClick(value){
-    this.select.next(value);
-  }
 }

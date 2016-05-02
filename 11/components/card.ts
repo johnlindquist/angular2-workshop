@@ -1,4 +1,4 @@
-import {Component, Input} from 'angular2/core';
+import {Component, Input, EventEmitter, Output} from 'angular2/core';
 @Component({
   selector: 'card',
   template: `<style>
@@ -9,25 +9,23 @@ import {Component, Input} from 'angular2/core';
   }
   
   .info{
-    width: 100%;
-    height: 100%;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-basis: 100px;
     justify-content: center;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    align-items: center;
+    flex-direction: column;
   }
 </style>
 <div class="card">
     <img [src]="person.image">
     <div class="info">
-      <h5 class="name">{{person.name}}</h5>
-      <a class="btn btn-primary"><i class="fa fa-plus"></i> Add to Party</a>
+      <h5>{{person.name}}</h5>
+      <a (click)="add.emit(person)" class="btn btn-primary"><i class="fa fa-plus"></i> Add to Party</a>
     </div>
   </div>
 `
 })
 export class Card{
   @Input() person;
+  @Output() add = new EventEmitter();
 }

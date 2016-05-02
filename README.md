@@ -1,8 +1,6 @@
-## Angular 2 StarWars Party
+{% raw %}
 
-### Credits
-Based heavily on the official seed project:
-[https://github.com/angular/angular2-seed](https://github.com/angular/angular2-seed)
+## Angular 2 StarWars Party
 
 ### Workshop Resources
 - [Angular 2 Cheat Sheet](https://angular.io/docs/ts/latest/cheatsheet.html)
@@ -14,7 +12,7 @@ The numbers folders 01-10 can be renamed at any time to catch up.
 For example, rename `07` to `src` then restart your `npm start` to
 catch up to Exercise 7.
 
-### Exercise 0 - Setup
+### Exercise 00 - Setup
 - Clone or fork this repository
 - Make sure you have [node.js](https://nodejs.org/) installed
 - run `npm install -g webpack webpack-dev-server typings typescript` to install global dependencies
@@ -26,14 +24,14 @@ catch up to Exercise 7.
 - Install and run [https://github.com/johnlindquist/swapi-json-server](https://github.com/johnlindquist/swapi-json-server)
 - open browser to [`http://localhost:4000`](http://localhost:4000)
 
-### Exercise 1 - Hello World
+### Exercise 01 - Hello World
 - Notice the `<app>` tag in `index.html`
 - Delete everything in `app.ts`
 - Write a `@Component` with a selector of `'app'`
 - Create a basic `template`
 - Remember to `export` your `class`
 
-### Exercise 2 - Create a Component
+### Exercise 02 - Create a Component
 - Create a `components` directory
 - Add a file called `home.ts`
 - Create a `@Component` and `export` it
@@ -41,7 +39,7 @@ catch up to Exercise 7.
 - Include the component with `directives:[Home]`
 - Add the component to your `template` with `<home>`
 
-### Exercise 3 - Handling Clicks and Refs
+### Exercise 03 - Handling Clicks and Refs
 #### Logging an event
 - Create a button in your `Home` component
 - Handle the click with a `(click)=onClick($event)`
@@ -53,7 +51,7 @@ catch up to Exercise 7.
 - Pass the value with `#i.value` of the input to the `onClick`
 - Log out the value
 
-### Exercise 4 - Smart and Dumb Components
+### Exercise 04 - Smart and Dumb Components
 #### Inputs
 - Add a `people = [{name:"John"}];` to your `Home` component
 - Create a `PersonList` component
@@ -69,7 +67,7 @@ catch up to Exercise 7.
 - Handle the `select` event in`Home` with `(selcect)=onSelect($event)`
 - Log out the input
 
-### Exercise 5 - Templates, Styles, and Built-in Directives
+### Exercise 05 - Templates, Styles, and Built-in Directives
 #### `NgModel`
 - Add an `[(ngModel)]="name"` to the `input`
 - Add a `<span>{{name}}</span>`
@@ -92,7 +90,7 @@ catch up to Exercise 7.
 - Add `[ngClass]="{'fa-star':isOver, 'fa-star-o':!isOver}"` to the `<i>`
 - Roll over the span to she the icon toggle
 
-### Exercise 6 - Repeating Elements with *ngFor
+### Exercise 06 - Repeating Elements with *ngFor
 
 #### `*ngFor`
 - Add more `people` to the `Home`
@@ -118,7 +116,7 @@ catch up to Exercise 7.
   <img [src]="person.image">
   <div class="info">
     <h5>{{person.name}}</h5>
-    <a href="#" class="btn btn-primary"><i class="fa fa-plus"></i> Add to Party</a>
+    <a class="btn btn-primary"><i class="fa fa-plus"></i> Add to Party</a>
   </div>
 </div>
 ```
@@ -155,7 +153,7 @@ import {Component, Input} from 'angular2/core';
     <img [src]="person.image">
     <div class="info">
       <h5>{{person.name}}</h5>
-      <a href="#" class="btn btn-primary"><i class="fa fa-plus"></i> Add to Party</a>
+      <a class="btn btn-primary"><i class="fa fa-plus"></i> Add to Party</a>
     </div>
   </div>
 `
@@ -166,7 +164,7 @@ export class Card{
 
 ```
 
-### Exercise 7 - Move the Data to a Service
+### Exercise 07 - Move the Data to a Service
 - Create `services` directory
 - Create a `StarWars.ts` file
 - Use the `@Inject()` decorator on a `StarWars` class
@@ -176,7 +174,7 @@ export class Card{
 - Use the service in the template `[people]="starWars.people"`
 
 
-### Exercise 8 - Loading Data with Http
+### Exercise 08 - Loading Data with Http
 - Add `providers: [HTTP_PROVIDERS],` to your `app.ts`
 - Import `import {Http} from 'angular2/http';` in your service
 - Inject `Http` in your service `constructor(private _http:Http){}`
@@ -212,7 +210,7 @@ Use an `| async` pipe to load the data in the template
   [people]="starWars.people | async"
 ```
 
-### Exercise 8 - Searching Data with a Pipe
+### Exercise 09 - Searching Data with a Pipe
 #### Housekeeping
 - Clean up `PersonList` template so only `input` and `card`s remain
 
@@ -302,3 +300,29 @@ import {ROUTER_PROVIDERS, RouteConfig, RouterOutlet, RouterLink} from 'angular2/
   border-color: #ddd #ddd transparent;
 }
 ```
+
+## Challenges (Solutions Not Included!)
+The following are for people who enjoy a challenge and working ahead.
+
+### Challenge
+Create a second service with a route to manage who you "Add" to the Party.
+
+### Moderate Challenge
+Add create, read, update, delete to the "Party" service
+so you can add, remove, edit people to the party. Also make
+sure you can't add the same Person to the party twice.
+
+### Difficult Challenge
+Create a "PersonDetail" component and route so that when you
+click on the Person image, it navigates to a route displaying
+Person's detail *including* all the images of starships they've
+flown :wink:
+
+### Difficult Challenge
+Build an "Autocomplete" search box from the Star Wars api.
+Prior RxJS knowledge is recommended.
+
+### Super Duper Tough Challenge
+Build a full Create, Read, Update, Delete app (the api supports it!)
+with the people from Star Wars including all of the features above!
+{% endraw %}
