@@ -1,7 +1,7 @@
-import {Component, Input, Output, EventEmitter} from 'angular2/core';
+import {Component, Input, Output, EventEmitter} from '@angular/core';
 import {Card} from './card';
 import {Search} from '../pipes/search';
-import {COMMON_PIPES} from 'angular2/common';
+import {COMMON_PIPES} from '@angular/common';
 COMMON_PIPES
 @Component({
   selector: 'person-list',

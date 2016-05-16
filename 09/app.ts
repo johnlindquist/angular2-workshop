@@ -1,6 +1,6 @@
-import {Component} from 'angular2/core';
+import {Component} from '@angular/core';
 import {Home} from './components/home';
-import {HTTP_PROVIDERS} from 'angular2/http';
+import {HTTP_PROVIDERS} from '@angular/http';
 @Component({
   selector: 'app',
   directives: [Home],

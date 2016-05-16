@@ -131,7 +131,7 @@ catch up to Exercise 7.
 
 ```js
 
-import {Component, Input} from 'angular2/core';
+import {Component, Input} from '@angular/core';
 @Component({
   selector: 'card',
   template: `<style>
@@ -176,7 +176,7 @@ export class Card{
 
 ### Exercise 08 - Loading Data with Http
 - Add `providers: [HTTP_PROVIDERS],` to your `app.ts`
-- Import `import {Http} from 'angular2/http';` in your service
+- Import `import {Http} from '@angular/http';` in your service
 - Inject `Http` in your service `constructor(private _http:Http){}`
 - Delete the `people` array
 - In the constructor, assign the people to an `http` request
@@ -184,8 +184,8 @@ export class Card{
 - `map` the images: `luke_skywalker.jpg` to `http://locahost:4000/luke_skywalker.jpg`
 
 ```js
-import {Injectable} from 'angular2/core';
-import {Http} from 'angular2/http';
+import {Injectable} from '@angular/core';
+import {Http} from '@angular/http';
 import 'rxjs/add/operator/map';
 
 const API = 'http://localhost:4000';
@@ -231,7 +231,7 @@ Use an `| async` pipe to load the data in the template
 - Create a `@Pipe()` called `Search`
 - Create your own searching logic
 ```js
-import {Pipe} from 'angular2/core';
+import {Pipe} from '@angular/core';
 @Pipe({
   name: 'search'
 })
@@ -266,7 +266,7 @@ pipes:[Search],
 - Create a simple `Party` component with a `hello world` template
 - Import all the required Router classes into `app.ts`
 ```js
-import {ROUTER_PROVIDERS, RouteConfig, RouterOutlet, RouterLink} from 'angular2/router';
+import {ROUTER_PROVIDERS, RouteConfig, RouterOutlet, RouterLink} from '@angular/router';
 ```
 - Include `RouterOutlet` and `RouterLink` in your `directives:[]`
 ```js

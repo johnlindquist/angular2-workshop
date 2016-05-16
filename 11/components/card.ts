@@ -1,4 +1,4 @@
-import {Component, Input, EventEmitter, Output} from 'angular2/core';
+import {Component, Input, EventEmitter, Output} from '@angular/core';
 @Component({
   selector: 'card',
   template: `<style>

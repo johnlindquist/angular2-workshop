@@ -1,9 +1,9 @@
-import {Component} from 'angular2/core';
+import {Component} from '@angular/core';
 import {PersonList} from './person-list';
 import {StarWars} from '../services/starwars';
 import {PartyService} from '../services/party';
 import {Party} from './party';
-import {RouteConfig, RouterOutlet} from 'angular2/router';
+import {RouteConfig, RouterOutlet} from '@angular/router';
 
 @Component({
   selector: 'home',
