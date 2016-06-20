@@ -22,7 +22,7 @@ import {Search} from '../pipes/search';
 
 <div class="card-container">
   <card
-    *ngFor="#person of people | search:'name':name"
+    *ngFor="let person of people | search:'name':name"
     [person]="person"
     (add)="select.emit($event)"
     >

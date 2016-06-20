@@ -3,7 +3,7 @@ import {PersonList} from './person-list';
 import {StarWars} from '../services/starwars';
 import {PartyService} from '../services/party';
 import {Party} from './party';
-import {RouteConfig, RouterOutlet} from '@angular/router';
+import {RouteConfig, RouterOutlet} from '@angular/router-deprecated';
 
 @Component({
   selector: 'home',

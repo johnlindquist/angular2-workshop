@@ -1,29 +1,40 @@
 import {Component, Input, Output, EventEmitter} from '@angular/core';
 import {Card} from './card';
-import {Search} from '../pipes/search';
-import {COMMON_PIPES} from '@angular/common';
-COMMON_PIPES
+
 @Component({
   selector: 'person-list',
   directives: [Card],
-  pipes:[Search],
   template: `<style>
-  .person {
-    cursor: pointer;
-    cursor: hand;
-  }
   .card-container{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
   }
+  .person {
+    cursor: pointer;
+    cursor: hand;
+  }
 </style>
 
-<input [(ngModel)]="name" type="text">
+<input [(ngModel)]="name" #i type="text">
+<button (click)="onClick(i.value)"><i class="fa fa-plus"></i></button>
 
+<hr>
+<span
+  class="person"
+  (mouseover)="isOver = true"
+  (mouseout)="isOver = false"
+>
+        {{name}}
+        <i
+          *ngIf="name"
+          class="fa"
+          [ngClass]="{'fa-star':isOver, 'fa-star-o':!isOver}">
+        </i>
+      </span>
 <div class="card-container">
   <card
-    *ngFor="#person of people | search:'name':name"
+    *ngFor="let person of people"
     [person]="person">
   </card>
 </div>

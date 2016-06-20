@@ -1,8 +1,9 @@
-import '@angular/bundles/@angular-polyfills.js';
+import 'core-js';
+import 'zone.js/dist/zone';
+
 import 'bootstrap/dist/css/bootstrap.css';
 import 'font-awesome/css/font-awesome.css';
 import 'font-awesome/fonts/fontawesome-webfont.woff2';
-
 
 import {bootstrap} from '@angular/platform-browser-dynamic';
 import {App} from './app';

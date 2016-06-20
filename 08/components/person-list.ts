@@ -34,7 +34,7 @@ import {Card} from './card';
       </span>
 <div class="card-container">
   <card
-    *ngFor="#person of people"
+    *ngFor="let person of people"
     [person]="person">
   </card>
 </div>

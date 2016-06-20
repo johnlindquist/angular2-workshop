@@ -1,7 +1,7 @@
 import {Component} from '@angular/core';
 import {Home} from './components/home';
 import {HTTP_PROVIDERS} from '@angular/http';
-import {ROUTER_PROVIDERS, RouteConfig, RouterOutlet, RouterLink} from '@angular/router';
+import {ROUTER_PROVIDERS, RouteConfig, RouterOutlet, RouterLink} from '@angular/router-deprecated';
 import {Party} from './components/party';
 
 @Component({
