@@ -46,6 +46,6 @@ export class PersonList{
   @Output() select = new EventEmitter();
 
   onClick(value){
-    this.select.next(value);
+    this.select.emit(value);
   }
 }

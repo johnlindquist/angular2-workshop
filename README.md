@@ -86,7 +86,7 @@ For example, rename `07` to `src` then restart your `npm start` to catch up to E
 
 #### `[ngClass]`
 - Add `(mouseover)="isOver = true" (mouseout)="isOver = false"` to `span`
-- Add `class="fa"` to the `<i>`
+- Change the `class` attribute to `class="fa"` on the `<i>` element
 - Add `[ngClass]="{'fa-star':isOver, 'fa-star-o':!isOver}"` to the `<i>`
 - Roll over the span to she the icon toggle
 
@@ -110,24 +110,17 @@ For example, rename `07` to `src` then restart your `npm start` to catch up to E
     }
   ];
 ```
-- Add a `card` to the `PersonList`
-```html
-<div class="card">
-  <img [src]="person.image">
-  <div class="info">
-    <h5>{{person.name}}</h5>
-    <a class="btn btn-primary"><i class="fa fa-plus"></i> Add to Party</a>
-  </div>
-</div>
-```
+#### Loop through each person using `*ngFor` on a simple element
+- Create a `p` element in `PersonList` that binds to `person.name`
+- Add `*ngFor="let person of people"` to the `p` tag
 
-#### Loop through each person using `*ngFor`
-- Create a `Card` component
+#### Loop through each person using `*ngFor` on a custom component
+- Create a `Card` component using the code below as a reference
 - Give the `Card` an `@Input()` of `person`
 - Add the `Card` to the `PersonList`
 - Add `*ngFor="let person of people"` to the `card`
 - Update the `src` to `[src]="person.image"`
-- Show the `person.name` in the `h4` with `{{person.name}}`
+- Show the `person.name` in the `h5` with `{{person.name}}`
 
 ```js
 
