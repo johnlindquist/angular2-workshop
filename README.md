@@ -9,20 +9,20 @@
 
 ### Completed Exercises
 The numbers folders 01-10 can be renamed at any time to catch up.
-For example, rename `07` to `src` then restart your `npm start` to
-catch up to Exercise 7.
+For example, rename `07` to `src` then restart your `npm start` to catch up to Exercise 7.
 
 ### Exercise 00 - Setup
 - Clone or fork this repository
 - Make sure you have [node.js](https://nodejs.org/) installed
-- run `npm install -g webpack webpack-dev-server typings typescript` to install global dependencies
-- run `npm install` to install dependencies
-- run `npm start` to fire up dev server
-- open browser to [`http://localhost:3000`](http://localhost:3000)
+- Run `npm install -g webpack webpack-dev-server typings typescript` to install global dependencies
+- Navigate to your project folder from the command line
+- Run `npm install` to install dependencies
+- Run `npm start` to fire up dev server
+- Open browser to [`http://localhost:3000`](http://localhost:3000)
 
 #### Set up the StarWars server
 - Install and run [https://github.com/johnlindquist/swapi-json-server](https://github.com/johnlindquist/swapi-json-server)
-- open browser to [`http://localhost:4000`](http://localhost:4000)
+- Open browser to [`http://localhost:4000`](http://localhost:4000)
 
 ### Exercise 01 - Hello World
 - Notice the `<app>` tag in `index.html`
@@ -63,8 +63,8 @@ catch up to Exercise 7.
 #### Outputs
 - Move the `input` and the `button` to the `PersonList`
 - Create an `@Output()` called `select`
-- Call `this.select.next(value)` in the button's `onClick` handler
-- Handle the `select` event in`Home` with `(selcect)=onSelect($event)`
+- Call `this.select.emit(value)` in the button's `onClick` handler
+- Handle the `select` event in`Home` with `(select)=onSelect($event)`
 - Log out the input
 
 ### Exercise 05 - Templates, Styles, and Built-in Directives
@@ -125,7 +125,7 @@ catch up to Exercise 7.
 - Create a `Card` component
 - Give the `Card` an `@Input()` of `person`
 - Add the `Card` to the `PersonList`
-- Add `*ngFor="#person of people"` to the `card`
+- Add `*ngFor="let person of people"` to the `card`
 - Update the `src` to `[src]="person.image"`
 - Show the `person.name` in the `h4` with `{{person.name}}`
 
@@ -219,7 +219,7 @@ Use an `| async` pipe to load the data in the template
 
 <div class="card-container">
   <card
-    *ngFor="#person of people"
+    *ngFor="let person of people"
     [person]="person">
   </card>
 </div>
@@ -257,7 +257,7 @@ pipes:[Search],
 - Use `'name'` as the `key` to search on
 - Use the `name` from the `[(ngModel)]="name"` as the term
 ```js
-  #person of people | search:'name':name"
+  let person of people | search:'name':name"
 ```
 
 

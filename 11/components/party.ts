@@ -4,7 +4,7 @@ import {PartyService} from '../services/party';
 @Component({
     selector: 'party',
     template: `<ul>
-    <li *ngFor="#person of partyService.attendees">
+    <li *ngFor="let person of partyService.attendees">
         {{person.name}}
     </li>
 </ul>
