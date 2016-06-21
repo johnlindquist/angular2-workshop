@@ -88,7 +88,7 @@ For example, rename `07` to `src` then restart your `npm start` to catch up to E
 - Add `(mouseover)="isOver = true" (mouseout)="isOver = false"` to `span`
 - Change the `class` attribute to `class="fa"` on the `<i>` element
 - Add `[ngClass]="{'fa-star':isOver, 'fa-star-o':!isOver}"` to the `<i>`
-- Roll over the span to she the icon toggle
+- Roll over the span to see the icon toggle
 
 ### Exercise 06 - Repeating Elements with *ngFor
 
