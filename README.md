@@ -63,7 +63,7 @@ For example, rename `07` to `src` then restart your `npm start` to catch up to E
 #### Outputs
 - Move the `input` and the `button` to the `PersonList`
 - Create an `@Output()` called `select`
-- Call `this.select.emit(value)` in the button's `onClick` handler
+- Call `select.emit(value)` in the button's `onClick` handler
 - Handle the `select` event in`Home` with `(select)=onSelect($event)`
 - Log out the input
 
