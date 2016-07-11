@@ -42,7 +42,7 @@ For example, rename `07` to `src` then restart your `npm start` to catch up to E
 ### Exercise 03 - Handling Clicks and Refs
 #### Logging an event
 - Create a button in your `Home` component
-- Handle the click with a `(click)=onClick($event)`
+- Handle the click with a `(click)="onClick($event)"`
 - Log out the event
 
 #### Logging an Input
